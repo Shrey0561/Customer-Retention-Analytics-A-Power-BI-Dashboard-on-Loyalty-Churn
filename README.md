@@ -24,11 +24,11 @@ Using SQL, Excel, and Power BI, I built an end-to-end analytical solution that c
   * Over **$3.49M** in revenue stems from **High Churn Risk** customers.
   * These segments represent 43% of total revenue, a major retention priority.
   
--**Fraud Correlation**
+ - **Fraud Correlation**
  * Fraudulent behavior is disproportionately present in high churn risk segments.
  * This indicates risk clustering that may require operational intervention.
 
--**Category-Level Insights**
+ - **Category-Level Insights**
  * "Home" and "Sports" categories show stronger loyalty indicators.
  * "Fashion" generates high revenue but lower retention, suggesting opportunistic buyers.
 
@@ -50,7 +50,7 @@ Using SQL, Excel, and Power BI, I built an end-to-end analytical solution that c
 ## Dashboard Preview
 
 ## Case Study: Behind the Queries
-Read the full case study here
+[Read the full case study here](https://docs.google.com/document/d/1QslwGDxt7Uj1MzdJjwGdME_j7KGeKJMZOj6Lu6rDnZg/edit?usp=sharing)
 
 ## Why This Project Matters
 Customer retention is a core driver of long-term profitability, yet is often under-analysed. This project provides a structured approach to dissecting loyalty behaviors using tools widely available to business teams.
