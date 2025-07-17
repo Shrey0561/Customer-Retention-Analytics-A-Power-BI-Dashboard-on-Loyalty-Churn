@@ -1,12 +1,14 @@
 # Beyond the First Click: A Power BI Deep Dive into Repeat Behavior in E-Commerce
 
-## Overview
-Customer acquisition may look promising, but a lack of repeat purchases often signals deeper business challenges. This project investigates repeat behavior patterns, loyalty segmentation, and churn risk using a synthetic e-commerce dataset.
-The goal?
-To identify what drives customer retention, where potential revenue is at risk, and how strategic focus can improve loyalty outcomes. 
-Using SQL, Excel, and Power BI, I built an end-to-end analytical solution that combines cohort segmentation with interactive storytelling.
+## TL;DR
+This project uses Power BI, SQL, and Excel to decode loyalty patterns and reveal over $3.49M in at-risk revenue. With cohort segmentation and churn detection, it simulates a data analyst's impact in a B2C setting from fraud signals to high-value customer retention strategies. 
 
-## Quick Project Snapshot
+## Overview
+Strong acquisition doesn't always translate to long-term growth. This project investigates patterns behind customer retention, segment performance, and behavioral risk within a synthetic e-commerce dataset. Using SQL, Excel, and Power BI, I developed a full-stack analytical solution to pinpoint which customer segments drive value, where drop-off occurs, and how to target high-impact opportunities.
+This project is designed to simulate a real-world analytics workflow from raw data to strategic dashboard delivery, mirroring how analysts contribute to business-critical insights in fast-paced environments.
+
+## Project Snapshot
+```markdown
 |Metric                  |Value       |
 |------------------------|------------|
 |Total Customers         | 4529       |
@@ -14,7 +16,7 @@ Using SQL, Excel, and Power BI, I built an end-to-end analytical solution that c
 |Number of Countries     | 10         |
 |Average Order Value     | 108.54     |
 |Average Orders/Customer | 10.02      |
-
+```
 ## Key Insights
 - **Loyalty Breakdown**
   * 45% of customers are classified as loyal; 30% fall into moderately loyal segments.
