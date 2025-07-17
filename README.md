@@ -41,12 +41,12 @@ Using a relational dataset of 4,500+ customers, I built a behavioral segmentatio
 |Average Orders/Customer | 10.02      |
 ```
 ## Dashboard Preview
-A screenshot of the *Power BI dashboard* is included in the repository. The visual story walks through customer segmentation, repeat patterns, fraud flags, and at-risk revenue, offering stakeholders clear direction on where to focus their retention efforts. 
+A visual snapshot of the Power BI dashboard is available in the repository. It presents customer segmentation, repeat behavior patterns, fraud indicators, and revenue-at-risk, all within a user-friendly, interactive interface tailored for stakeholder review.
 
 ![CRM dashboard preview](crm_dashboard_preview.png)
 
 ## SQL Queries Preview
-The following section gives you a hands-on look at the core components that drove this analysis, from the SQL structures that segmented churn risk to the Power BI visuals that made the insight pop.
+The following section provides a high-level view of the core SQL logic used in the analysis. From churn segmentation to fraud clustering and revenue cohorting, these queries represent the foundation of the insights delivered.
 
 ![CRM Table](crm_table.png)
 
@@ -79,16 +79,16 @@ The following section gives you a hands-on look at the core components that drov
 | `README.md`                 | This file                     |
 
 ## Case Study: Behind the Queries
-Get a glimpse of the technical foundation behind this project, SQL logic, dashboard design choices, and the full analytical write-up that connects the dots between data and decision.
+Explore the full case study for a structured narrative of the business context, technical implementation, and key takeaways. This includes SQL methodology, visual design choices, and the logic driving stakeholder recommendations.
 
 [View the full case study here](https://docs.google.com/document/d/1QslwGDxt7Uj1MzdJjwGdME_j7KGeKJMZOj6Lu6rDnZg/edit?usp=sharing)
 
 ```markdown
 ## Sample Analytical Techniques
- * **Cohort Segmentation**: Defined customers into loyalty bands based on recency and frequency logic via SQL.
- * **Fraud Detection Layer**: Mapped fraud incidents across churn risk levels to assess correlation.
- * **Revenue Attribution**: Used conditional logic to bucket revenue by customer behavior for financial modeling.
- * **Category Behavioral Matrix**: Cross-referenced category affinity with loyalty scores to guide merchandising decisions.
+ * Cohort Segmentation: Defined customers into loyalty bands based on recency and frequency logic via SQL.
+ * Fraud Detection Layer: Mapped fraud incidents across churn risk levels to assess correlation.
+ * Revenue Attribution: Used conditional logic to bucket revenue by customer behavior for financial modeling.
+ * Category Behavioral Matrix: Cross-referenced category affinity with loyalty scores to guide merchandising decisions.
 ```
 
 ## Why This Project Matters
