@@ -1,7 +1,7 @@
 # Beyond the First Click: A Power BI Deep Dive into Repeat Behavior in E-Commerce
 
 ## TL;DR
-This project explores repeat customer behavior in an e-commerce environment using a full-stack data analytics approach: SQL for segmentation logic, Excel for preprocessing, and Power BI for the dashboard. Through behavioral cohorting, churn segmentation, and fraud pattern detection, the analysis identifies key revenue risks and high-value customer groups to inform retention strategy.
+This project examines repeat customer behavior in an e-commerce environment using a comprehensive data analytics approach, incorporating SQL for segmentation logic, Excel for data preprocessing, and Power BI for the dashboard. Through behavioral cohorting, churn segmentation, and fraud pattern detection, the analysis identifies key revenue risks and high-value customer groups, informing the retention strategy.
 
 ## Table of Contents
  * [Project Objective](#project-objective)
@@ -48,9 +48,46 @@ A visual snapshot of the Power BI dashboard is available in the repository. It p
 ## SQL Queries Preview
 The following section provides a high-level view of the core SQL logic used in the analysis. From churn segmentation to fraud clustering and revenue cohorting, these queries represent the foundation of the insights delivered.
 
-![CRM Table](crm_table.png)
-
-![CRM Result](crm_result.png)
+```sql
+-- This is a SQL code block
+WITH CRM AS (
+ SELECT Preferred_Category,
+ ROUND(AVG(Loyalty_Score), 2) AS Avg_Loyalty_Score,
+ ROUND(AVG(Total_Orders), 2) AS Avg_Orders,
+ ROUND(AVG(Churn_Risk), 2) AS Avg_Revenue_Loss
+FROM ecommerce_table
+GROUP BY Preferred_Category
+)
+SELECT
+e.Customer_Id,
+e.Country,
+e.Total_Orders,
+ CASE
+  WHEN e.Total_Orders BETWEEN 15 AND 19 THEN 'Super Loyal'
+  WHEN e.Total_Orders BETWEEN 10 AND 14 THEN 'Loyal'
+  WHEN e.Total_Orders BETWEEN 5 AND 9 THEN 'Moderately Loyal'
+  WHEN e.Total_Orders BETWEEN 1 AND 4 THEN 'Low Engaged'
+ ELSE 'Inactive'
+END AS Loyalty_Segment,
+ROUND(e.Avg_Order_Value * e.Total_Orders, 2) AS Total_Revenue,
+ CASE
+  WHEN (Avg_Order_Value * Total_Orders) >= 1000 THEN 'High'
+  WHEN (Avg_Order_Value * Total_Orders) >= 500 THEN 'Medium'
+ ELSE 'Low'
+END AS Churn_Risk_Segment,
+ CASE
+  WHEN e.Is_Fraudulent = 1 THEN 'Yes'
+  ELSE 'No'
+END AS Fraud_Status,
+e.Preferred_Category,
+c.Avg_Loyalty_Score,
+c.Avg_Orders,
+c.Avg_Revenue_Loss
+FROM ecommerce_table e
+LEFT JOIN CRM c
+ ON e.Preferred_Category = c.Preferred_Category
+WHERE e.Country IS NOT NULL;
+```
 
 ## Key Insights & Business Impact
 ### Retention Segments
