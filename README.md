@@ -15,7 +15,7 @@ This project examines repeat customer behavior in an e-commerce environment usin
  * [Case Study: Behind the Queries](#case-study-behind-the-queries)
  * [Sample Analytical Techniques](#sample-analytical-techniques)
  * [Why This Project Matters](#why-this-project-matters)
- * [Let's Connecct](#lets-connect)
+ * [Let's Connect](#lets-connect)
 
 ## Project Objective
 To investigate customer retention patterns and repeat purchasing behavior in a simulated e-commerce setting, to identify drivers of loyalty, risk clusters, and category-specific retention performance. The project emphasizes end-to-end data ownership, from raw modeling to strategic insight delivery.
